@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WDD 131 – Dynamic Web Fundamentals – Gabriel Muñoz</title>
-  <meta name="description" content="Explore Gabriel Muñoz's WDD 131 course page featuring dynamic web projects, HTML and CSS assignments, and insights into responsive web design and development." />
-  <meta name="author" content="Gabriel Muñoz" />
-  
+  <title>WDD 131 - Dynamic Web Fundamentals - Gabriel Muñoz Beltran</title>
+  <meta name="description" content="Explore Gabriel Muñoz Beltran's WDD 131 course page featuring dynamic web projects, HTML and CSS assignments, and insights into responsive web design and development." />
+  <meta name="author" content="Gabriel Muñoz Beltran" />
+
   <!-- Google Fonts -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
   <!-- External CSS -->
   <link rel="stylesheet" href="styles/base.css" />
 
@@ -27,25 +27,41 @@
       <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng&id=p27#p27" target="_blank">Scripture</a>
       <a href="#">Final Project</a>
     </nav>
-  </header>  
+  </header>
+
   <main>
-    <h1>Gabriel Muñoz Beltran</h1>
-    <section class="card">
-      <h2>About Me</h2>
-      <img src="images/profile.jpg" alt="Gabriel Muñoz smiling" width="200" />
-      <p>I have always dreamed of being a singer. I enjoy playing the guitar and piano. I currently work as a motion graphic designer at a marketing agency where I combine storytelling with visuals.</p>
+    <section class="main-content">
+      <div class="card">
+        <div class="card-header">About Me</div>
+        <div class="card-body">
+          <img src="images/profile.jpg" alt="Gabriel Muñoz smiling" class="small-img" />
+          <p>My name is Gabriel, I have always dreamed of being a singer. I enjoy playing the guitar and piano. I currently work as a motion graphic designer at a marketing agency where I combine storytelling with visuals.</p>
+          <h2>My City</h2>
+          <img src="images/guayaquil.jpg" alt="Guayaquil city landscape" class="small-img" />
+          <p>Guayaquil is Ecuador's largest city and main port, located in the province of Guayas. It has a tropical climate and over 2.7 million residents.</p>
+          <p>The city blends modern areas like Malecón 2000 with historic sites like Santa Ana Hill. It's known for its vibrant culture, coastal cuisine, and major festivals in July and October.</p>
+        </div>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>Guayaquil, Ecuador</h2>
-      <img src="images/guayaquil.jpg" alt="Guayaquil city landscape" width="400" />
-      <p>Guayaquil is Ecuador's largest city and main port, located in the province of Guayas. It has a tropical climate and over 2.7 million residents.</p>
-      <p>The city blends modern areas like Malecón 2000 with historic sites like Santa Ana Hill. It's known for its vibrant culture, coastal cuisine, and major festivals in July and October.</p>
-    </section>
+    <aside class="sidebar">
+      <div class="card">
+        <div class="card-header">Links of Interest</div>
+        <div class="card-body">
+          <ul>
+            <li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
+            <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+            <li><a href="https://web.dev/">web.dev</a></li>
+            <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
   </main>
+
   <footer>
     <p>&copy; <span id="currentyear"></span> 🎵 Gabriel Muñoz 🎵 | Guayaquil, Ecuador</p>
-    <p id="lastModified"></p>
-  </footer>     
+    <p class="date" id="lastModified"></p>
+  </footer>
 </body>
 </html>
