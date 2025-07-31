@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD 131 – Dynamic Web Fundamentals – Gabriel Muñoz</title>
+  <meta name="description" content="Explore Gabriel Muñoz's WDD 131 course page featuring dynamic web projects, HTML and CSS assignments, and insights into responsive web design and development." />
+  <meta name="author" content="Gabriel Muñoz" />
+  
+  <!-- Google Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles/base.css" />
+
+  <!-- JavaScript -->
+  <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    
+  <header>
+    <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+    <nav>
+      <a href="https://www.linkedin.com/in/gabriel-mu%C3%B1oz/" target="_blank">MyLinkedIn</a>
+      <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng&id=p27#p27" target="_blank">Scripture</a>
+      <a href="#">Final Project</a>
+    </nav>
+  </header>  
+  <main>
+    <h1>Gabriel Muñoz Beltran</h1>
+    <section class="card">
+      <h2>About Me</h2>
+      <img src="images/profile.jpg" alt="Gabriel Muñoz smiling" width="200" />
+      <p>I have always dreamed of being a singer. I enjoy playing the guitar and piano. I currently work as a motion graphic designer at a marketing agency where I combine storytelling with visuals.</p>
+    </section>
+
+    <section class="card">
+      <h2>Guayaquil, Ecuador</h2>
+      <img src="images/guayaquil.jpg" alt="Guayaquil city landscape" width="400" />
+      <p>Guayaquil is Ecuador's largest city and main port, located in the province of Guayas. It has a tropical climate and over 2.7 million residents.</p>
+      <p>The city blends modern areas like Malecón 2000 with historic sites like Santa Ana Hill. It's known for its vibrant culture, coastal cuisine, and major festivals in July and October.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="currentyear"></span> 🎵 Gabriel Muñoz 🎵 | Guayaquil, Ecuador</p>
+    <p id="lastModified"></p>
+  </footer>     
 </body>
 </html>
