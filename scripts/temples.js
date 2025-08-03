@@ -5,6 +5,5 @@ document.getElementById('menu').addEventListener('click', () => {
   menuBtn.textContent = menuBtn.textContent === '☰' ? '✖' : '☰';
 });
 
-
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = document.lastModified;
