@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Thank you for your review!</h1>
+    </header>
+
+    <main>
+        <p id="counterText">You have submitted 0 reviews so far.</p>
+        <a href="form.html">Submit another review</a>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> | Gabriel Muñoz | Guayaquil - Ecuador Last Updated: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        // Obtener contador del localStorage
+        let reviewCount = localStorage.getItem('reviewCount');
+
+        // Si no existe, iniciar en 0
+        reviewCount = reviewCount ? parseInt(reviewCount) : 0;
+
+        // Sumar 1 al contador
+        reviewCount++;
+
+        // Guardar el nuevo valor en localStorage
+        localStorage.setItem('reviewCount', reviewCount);
+
+        // Mostrar en el HTML
+        const counterText = document.getElementById('counterText');
+        counterText.textContent = `You have submitted ${reviewCount} review${reviewCount > 1 ? 's' : ''} so far.`;
+    </script>
+</body>
+</html>
