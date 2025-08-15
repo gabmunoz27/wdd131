@@ -58,14 +58,24 @@ main {
   border-radius: 4px;
   margin-top: 0;
   font-size: 1.2rem;
+  display: flex;
+  align-items: center;
   position: relative;
 }
 
+.weather-icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+/* ::after decorativo */
 .weather h2::after {
   content: "";
   display: inline-block;
-  width: 30px;   /* antes 20px */
-  height: 30px;  /* antes 20px */
+  width: 30px;
+  height: 30px;
   margin-left: 0.5rem;
   background-image: url("../images/weather.svg");
   background-size: contain;
