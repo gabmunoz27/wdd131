@@ -1,8 +1,9 @@
 :root {
   --primary-color: #004466;
-  --secondary-color: #004466;
-  --font-family: Arial, sans-serif;
+  --secondary-color: var(--primary-color);
+  --font-family: 'Montserrat', sans-serif;
 }
+
 
 body {
   margin: 0;

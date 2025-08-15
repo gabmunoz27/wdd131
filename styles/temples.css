@@ -4,7 +4,6 @@ body {
   padding: 0;
 }
 
-/* Encabezado */
 header {
   background: #004466;
   color: white;
@@ -40,26 +39,22 @@ header {
   transition: all 0.3s ease;
 }
 
-/* Efecto hover */
 .navigation a:hover {
   background-color: #006699;
   box-shadow: 0 0 10px #333;
   color: #fff;
 }
 
-/* Mostrar menú cuando se activa */
 .navigation.show {
   display: flex;
 }
 
-/* Main centrado */
 main {
   max-width: 800px;
   margin: 0 auto;
   padding: 1rem;
 }
 
-/* Galería en grid */
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
