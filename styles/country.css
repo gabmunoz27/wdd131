@@ -70,7 +70,6 @@ main {
   vertical-align: middle;
 }
 
-/* ::after decorativo */
 .weather h2::after {
   content: "";
   display: inline-block;

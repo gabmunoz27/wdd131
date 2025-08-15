@@ -26,19 +26,19 @@
     </footer>
 
     <script>
-        // Obtener contador del localStorage
+        
         let reviewCount = localStorage.getItem('reviewCount');
 
-        // Si no existe, iniciar en 0
+        
         reviewCount = reviewCount ? parseInt(reviewCount) : 0;
 
-        // Sumar 1 al contador
+       
         reviewCount++;
 
-        // Guardar el nuevo valor en localStorage
+        
         localStorage.setItem('reviewCount', reviewCount);
 
-        // Mostrar en el HTML
+        
         const counterText = document.getElementById('counterText');
         counterText.textContent = `You have submitted ${reviewCount} review${reviewCount > 1 ? 's' : ''} so far.`;
     </script>
