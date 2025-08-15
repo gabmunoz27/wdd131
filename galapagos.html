@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecuador - Country Page</title>
+  <link rel="stylesheet" href="styles/galapagos.css">
+  <script src="scripts/galapagos.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Explore Ecuador</h1>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <picture>
+        <source srcset="images/galapagos.webp" media="(min-width: 800px)">
+        <img src="images/ecuador-small.webp" alt="Beautiful view of Ecuador">
+      </picture>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="weather">
+      <h2>Weather <span class="icon" aria-hidden="true"></span></h2>
+      <p>Temperature: <span id="temp">21</span> °C</p>
+      <p>Wind Speed: <span id="wind">13</span> km/h</p>
+      <p>Wind Chill: <span id="chill"></span></p>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info">
+      <h2>About Galapagos</h2>
+      <p>Galapagos is an archipelago located in the Pacific Ocean, known for its unique wildlife and natural beauty.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> | Gabriel Muñoz | Guayaquil - Ecuador Last Updated: <span id="lastModified"></span></p>
+  </footer>
+
+</body>
+</html>
