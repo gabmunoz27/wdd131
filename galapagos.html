@@ -3,42 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ecuador - Country Page</title>
+  <title>Ecuador - Country Page - wdd131</title>
   <link rel="stylesheet" href="styles/galapagos.css">
   <script src="scripts/galapagos.js" defer></script>
 </head>
 <body>
 
   <header>
-    <h1>Explore Ecuador</h1>
+    <h1>Ecuador</h1>
   </header>
 
   <main>
-    <!-- Hero Section -->
     <section class="hero">
       <picture>
-        <source srcset="images/galapagos.webp" media="(min-width: 800px)">
-        <img src="images/ecuador-small.webp" alt="Beautiful view of Ecuador">
+        <source srcset="images/ecuador.jpeg" media="(max-width: 800px)">
+        <img src="images/ecuador.jpeg" alt="Landscape of Ecuador">
       </picture>
-    </section>
 
-    <!-- Weather Section -->
-    <section class="weather">
-      <h2>Weather <span class="icon" aria-hidden="true"></span></h2>
-      <p>Temperature: <span id="temp">21</span> °C</p>
-      <p>Wind Speed: <span id="wind">13</span> km/h</p>
-      <p>Wind Chill: <span id="chill"></span></p>
-    </section>
+      <div class="overlay">
+        <div class="data">
+          <h2>Data</h2>
+            <p><strong>Area:</strong> 283,561 sq km</p>
+            <p><strong>Population:</strong> ~18 million</p>
+            <p><strong>Capital:</strong> Quito</p>
+            <p><strong>Languages:</strong> Spanish (official), Kichwa, Shuar, and other indigenous languages</p>
+            <p><strong>Currency:</strong> United States Dollar (USD)</p>
+            <p><strong>Time Zone:</strong> UTC-5 (Mainland), UTC-6 (Galápagos)</p>
+            <p><strong>Calling Code:</strong> +593</p>
+            <p><strong>Internet TLD:</strong> .ec</p>
+        </div>
 
-    <!-- Info Section -->
-    <section class="info">
-      <h2>About Galapagos</h2>
-      <p>Galapagos is an archipelago located in the Pacific Ocean, known for its unique wildlife and natural beauty.</p>
+        <!-- Weather -->
+        <div class="weather">
+            <h2>Weather</h2>
+            <p>Temperature: <span id="temp">20</span> °C</p>
+            <p>Conditions: Partly Cloudy</p>
+            <p>Wind: <span id="wind">15</span> km/h</p>
+            <p>Wind Chill: <span id="chill"></span></p>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> | Gabriel Muñoz | Guayaquil - Ecuador Last Updated: <span id="lastModified"></span></p>
+    <p>&copy; <span id="year"></span> | Gabriel Muñoz | Guayaquil - Ecuador | Last Updated: <span id="lastModified"></span></p>
   </footer>
 
 </body>
