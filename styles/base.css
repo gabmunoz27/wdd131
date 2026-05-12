@@ -1,0 +1,149 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Grid Layout */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f8f8f8;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #1d4c71;
+  color: white;
+  text-align: center;
+  padding: 20px 15px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #2e2e2e;
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  background-color: #444;
+}
+
+/* Main Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.grid-container h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card */
+.card {
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  background-color: #1d4c71;
+  color: white;
+  padding: 12px 16px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card-body p {
+  margin-bottom: 12px;
+}
+
+.card-body ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.card-body a {
+  color: #3333cc;
+  text-decoration: none;
+}
+
+.card-body a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #1d4c71;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+footer .date {
+  font-size: 0.75rem;
+  color: #e0e0e0;
+  margin-top: 5px;
+}
+
+#course-title {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
