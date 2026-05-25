@@ -65,11 +65,16 @@ main {
   position: relative;
 }
 
-.weather-icon {
-  width: 30px;
-  height: 30px;
+.weather h2::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
   margin-left: 0.5rem;
-  vertical-align: middle;
+  background-image: url("../images/weather.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   filter: invert(1);
 }
 
