@@ -99,7 +99,7 @@ function renderProjects(filter) {
     : projects.filter(p => p.category === filter);
 
   if (filtered.length === 0) {
-    grid.innerHTML = `<p class="text-muted" style="grid-column:1/-1;text-align:center;padding:3rem 0;">
+    grid.innerHTML = `<p class="text-muted no-results">
       No projects found for this category.
     </p>`;
     return;
@@ -107,9 +107,18 @@ function renderProjects(filter) {
 
   grid.innerHTML = filtered.map(p => buildCardHTML(p)).join('');
 
-  // trigger reveal for newly inserted cards
+  // Cards are inserted dynamically AFTER main.js's IntersectionObserver
+  // already ran on DOMContentLoaded, so those cards are never picked up.
+  // We handle the reveal here directly with a staggered animation.
   grid.querySelectorAll('[data-reveal]').forEach((el, i) => {
-    setTimeout(() => el.classList.add('revealed'), i * 80);
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+    setTimeout(() => {
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+      el.classList.add('revealed');
+    }, i * 80);
   });
 }
 
@@ -120,8 +129,8 @@ function buildCardHTML(project) {
     .join('');
 
   const highlightsHTML = project.highlights
-    .map(h => `<li style="font-size:0.8rem;color:var(--text-secondary);padding-left:0.75rem;position:relative;">
-      <span style="position:absolute;left:0;color:var(--accent);">›</span>${h}
+    .map(h => `<li class="highlight-item">
+      <span class="highlight-arrow">›</span>${h}
     </li>`)
     .join('');
 
@@ -130,13 +139,13 @@ function buildCardHTML(project) {
       <div class="card-header">
         <div>
           <span class="card-category">${categoryLabels[project.category]}</span>
-          <h3 style="margin-top:0.3rem;">${project.title}</h3>
+          <h3>${project.title}</h3>
         </div>
         <span class="card-icon" aria-hidden="true">${project.icon}</span>
       </div>
       <div class="card-body">
         <p>${project.description}</p>
-        <ul style="margin-top:0.75rem;margin-bottom:1rem;display:flex;flex-direction:column;gap:0.3rem;">
+        <ul class="highlights-list">
           ${highlightsHTML}
         </ul>
         <div class="card-chips">${chipsHTML}</div>
@@ -230,7 +239,6 @@ function showProjectToast(saved, name) {
     ? `<span class="toast-accent">★ Saved:</span> ${name}`
     : `<span class="toast-accent">Removed:</span> ${name}`;
 
-  // reuse showToast from main.js
   if (typeof showToast === 'function') {
     showToast(msg);
   }
@@ -241,8 +249,8 @@ function updateCounter() {
   const counter = document.querySelector('#project-count');
   if (!counter) return;
 
-  const filter   = activeFilter;
-  const count    = filter === 'all' ? projects.length : projects.filter(p => p.category === filter).length;
+  const filter = activeFilter;
+  const count  = filter === 'all' ? projects.length : projects.filter(p => p.category === filter).length;
   counter.textContent = `${count} project${count !== 1 ? 's' : ''}`;
 }
 
@@ -253,7 +261,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initSaveButtons();
   updateCounter();
 
-  // update counter on filter change (via MutationObserver on grid)
   const grid = document.querySelector('#projects-grid');
   if (grid) {
     new MutationObserver(updateCounter).observe(grid, { childList: true });

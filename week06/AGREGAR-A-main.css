@@ -1,0 +1,159 @@
+/* ============================================================
+   AGREGAR AL FINAL DE styles/main.css
+   Estas clases reemplazan todos los inline styles eliminados
+   de index.html, about.html, contact.html, projects.html
+   y projects.js
+   ============================================================ */
+
+
+/* ── about.html ────────────────────────────────────────────
+   Reemplaza: h1 style="font-size: clamp(...); margin-bottom: 1.25rem;"
+*/
+.about-page-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  margin-bottom: 1.25rem;
+}
+
+/* Reemplaza: p style="margin-bottom: 1rem;" (párrafos del bio) */
+.bio-paragraph {
+  margin-bottom: 1rem;
+}
+
+/* Reemplaza: hr style="margin: 2.5rem 0;" */
+.divider-spaced {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
+
+/* Reemplaza: h2 style="font-size: 1.5rem; margin-bottom: 1.5rem;" */
+.about-section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Reemplaza: h2 style="font-size: 1.5rem;" (sin margin-bottom, ej: "How I work") */
+.about-section-title-tight {
+  font-size: 1.5rem;
+}
+
+/* Reemplaza inline styles en renderSkills() — etiqueta del nombre del skill */
+.skill-name {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+/* Reemplaza inline styles en renderSkills() — porcentaje del skill */
+.skill-percent {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Reemplaza inline styles en renderSkills() — título del grupo (h3) */
+.skill-group-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+
+/* ── index.html ────────────────────────────────────────────
+   Reemplaza: h3 style="margin-top:0.3rem;" (dentro de .card-header)
+   Ya existe .card-body h3 — se añade la regla para .card-header h3
+*/
+.card-header h3 {
+  margin-top: 0.3rem;
+}
+
+/* Reemplaza: div.card-chips style="margin-top:1rem;"
+   La clase .card-chips ya existe, solo le añadimos margin-top
+   cuando aparece dentro de .card-body
+*/
+.card-body .card-chips {
+  margin-top: 1rem;
+}
+
+
+/* ── projects.html ─────────────────────────────────────────
+   Reemplaza: section style="padding-bottom: 1.5rem;" (header de página)
+*/
+.section-page-header {
+  padding-bottom: 1.5rem;
+}
+
+/* Reemplaza: h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem);" */
+.projects-page-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+/* Reemplaza: section style="padding-top: 2rem;" (grid de proyectos) */
+.section-grid-top {
+  padding-top: 2rem;
+}
+
+
+/* ── contact.html ──────────────────────────────────────────
+   Reemplaza: span style="color:var(--accent);" (asterisco requerido)
+*/
+.required-star {
+  color: var(--accent);
+}
+
+/* Reemplaza: button style="width:100%;justify-content:center;" */
+.btn-full {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Reemplaza: a.btn-outline style="margin-top:1.5rem;" en #form-success */
+.success-back-btn {
+  margin-top: 1.5rem;
+}
+
+
+/* Reemplaza: h1 style="font-size: clamp(...); margin-bottom: 0.75rem;" en contact.html */
+.contact-page-title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin-bottom: 0.75rem;
+}
+
+/* Reemplaza: p style="grid-column:1/-1;text-align:center;padding:3rem 0;" en projects.js */
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+
+/* ── projects.js (template literals) ──────────────────────
+   Reemplaza: li style="font-size:0.8rem;color:var(--text-secondary);
+              padding-left:0.75rem;position:relative;"
+*/
+.highlight-item {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  padding-left: 0.75rem;
+  position: relative;
+}
+
+/* Reemplaza: span style="position:absolute;left:0;color:var(--accent);" */
+.highlight-arrow {
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* Reemplaza: ul style="margin-top:0.75rem;margin-bottom:1rem;
+             display:flex;flex-direction:column;gap:0.3rem;" */
+.highlights-list {
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}

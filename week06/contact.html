@@ -30,7 +30,7 @@
       <div class="container">
 
         <span class="section-label">Get in touch</span>
-        <h1 style="font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 0.75rem;">Let's work together</h1>
+        <h1 class="contact-page-title">Let's work together</h1>
         <p class="section-desc">
           I'm open to analyst, automation, and data roles. Use the form below or reach out through the channels on the left.
         </p>
@@ -74,7 +74,7 @@
             <form id="contact-form" novalidate aria-label="Contact form">
 
               <div class="form-group">
-                <label for="name">Full name <span aria-hidden="true" style="color:var(--accent);">*</span></label>
+                <label for="name">Full name <span aria-hidden="true" class="required-star">*</span></label>
                 <input
                   type="text"
                   id="name"
@@ -87,7 +87,7 @@
               </div>
 
               <div class="form-group">
-                <label for="email">Email address <span aria-hidden="true" style="color:var(--accent);">*</span></label>
+                <label for="email">Email address <span aria-hidden="true" class="required-star">*</span></label>
                 <input
                   type="email"
                   id="email"
@@ -100,7 +100,7 @@
               </div>
 
               <div class="form-group">
-                <label for="subject">Subject <span aria-hidden="true" style="color:var(--accent);">*</span></label>
+                <label for="subject">Subject <span aria-hidden="true" class="required-star">*</span></label>
                 <select id="subject" name="subject" aria-required="true" aria-describedby="subject-error">
                   <option value="">Select a topic…</option>
                   <option value="job">Job opportunity</option>
@@ -112,7 +112,7 @@
               </div>
 
               <div class="form-group">
-                <label for="message">Message <span aria-hidden="true" style="color:var(--accent);">*</span></label>
+                <label for="message">Message <span aria-hidden="true" class="required-star">*</span></label>
                 <textarea
                   id="message"
                   name="message"
@@ -123,7 +123,7 @@
                 <span class="form-error" id="message-error" role="alert">Message must be at least 20 characters.</span>
               </div>
 
-              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+              <button type="submit" class="btn btn-primary btn-full">
                 Send message
               </button>
 
@@ -134,7 +134,7 @@
               <div class="success-icon" aria-hidden="true">✅</div>
               <h3>Message sent, <span class="success-name"></span>!</h3>
               <p>Thanks for reaching out. I'll get back to you within 1–2 business days.</p>
-              <a href="index.html" class="btn btn-outline" style="margin-top:1.5rem;">Back to home</a>
+              <a href="index.html" class="btn btn-outline success-back-btn">Back to home</a>
             </div>
 
           </div>
