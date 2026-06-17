@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Gabriel Muñoz — Data & Automation Analyst. Portfolio of Power Automate flows, data dashboards, and web development projects.">
-  <title>Gabriel Muñoz — Portfolio</title>
+  <meta name="description" content="Gabriel Muñoz — Data & Automation Analyst. Power Automate flows, data dashboards, and web tools built at Banco Guayaquil.">
+  <title>Gabriel Muñoz — Data & Automation Analyst</title>
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -27,44 +27,154 @@
 
   <main class="page-wrapper">
 
-    <!-- ── Hero ────────────────────────────────────────────── -->
-    <section class="hero">
-      <!-- Foto de fondo -->
-      <img src="images/Hero.png" alt="" class="hero-bg" aria-hidden="true" loading="eager">
-      <!-- Overlay oscuro para legibilidad -->
-      <div class="hero-overlay"></div>
+    <!-- ── Hero (editorial / asymmetric) ───────────────────── -->
+    <section class="hero hero-v2">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
 
-      <div class="container hero-container">
-        <!-- Texto -->
-        <div class="hero-content">
-          <span class="hero-eyebrow">Available for opportunities</span>
-          <h1 class="hero-title">
-            Gabriel<br>
-            <span class="name-accent">Muñoz</span>
+      <div class="container hero-v2-inner">
+        <div class="hero-v2-content">
+          <span class="hero-eyebrow status-eyebrow">
+            <span class="status-dot" aria-hidden="true"></span>
+            Available for opportunities
+          </span>
+
+          <h1 class="hero-v2-title">
+            I turn <span class="word-strike">manual</span>
+            <span class="name-accent">processes</span><br>
+            into <span class="underline-accent">automation.</span>
           </h1>
-          <p class="hero-subtitle">
-            Fraud &amp; Compliance Analyst at Banco Guayaquil. I build automation workflows, data dashboards, and web tools that turn repetitive processes into efficient systems.
+
+          <p class="hero-v2-subtitle">
+            Hi, I'm <strong>Gabriel Muñoz</strong> — Fraud &amp; Compliance Analyst at Banco Guayaquil.
+            I build Power Automate flows, data dashboards, and web tools that replace
+            repetitive work with reliable systems.
           </p>
+
           <div class="hero-cta">
-            <a href="projects.html" class="btn btn-primary">View my work</a>
+            <a href="projects.html" class="btn btn-primary">View my work →</a>
             <a href="contact.html" class="btn btn-outline">Get in touch</a>
+          </div>
+
+          <div class="hero-meta">
+            <span class="hero-meta-item">📍 Guayaquil, Ecuador</span>
+            <span class="hero-meta-sep">·</span>
+            <span class="hero-meta-item">💼 Banco Guayaquil</span>
+            <span class="hero-meta-sep">·</span>
+            <span class="hero-meta-item">🎓 BYU-Idaho</span>
           </div>
         </div>
 
-        <!-- Stats -->
-        <div class="hero-stats">
+        <!-- Decorative "flow" panel -->
+        <aside class="hero-flow" aria-hidden="true">
+          <div class="flow-window">
+            <div class="flow-window-bar">
+              <span></span><span></span><span></span>
+              <span class="flow-window-title">automation.flow</span>
+            </div>
+            <div class="flow-window-body">
+              <div class="flow-node node-trigger">
+                <span class="flow-icon">⚡</span>
+                <div>
+                  <div class="flow-label">Trigger</div>
+                  <div class="flow-name">Microsoft Forms submission</div>
+                </div>
+              </div>
+              <div class="flow-arrow">↓</div>
+              <div class="flow-node">
+                <span class="flow-icon">📋</span>
+                <div>
+                  <div class="flow-label">Action</div>
+                  <div class="flow-name">Get rows · SharePoint</div>
+                </div>
+              </div>
+              <div class="flow-arrow">↓</div>
+              <div class="flow-node node-condition">
+                <span class="flow-icon">◆</span>
+                <div>
+                  <div class="flow-label">Condition</div>
+                  <div class="flow-name">If attachment exists</div>
+                </div>
+              </div>
+              <div class="flow-arrow">↓</div>
+              <div class="flow-node node-success">
+                <span class="flow-icon">✉</span>
+                <div>
+                  <div class="flow-label">Output</div>
+                  <div class="flow-name">Send dynamic HTML email</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Stats row -->
+      <div class="container">
+        <div class="hero-stats hero-stats-v2">
           <div class="stat-card">
             <div class="stat-number">6+</div>
             <div class="stat-label">Power Automate flows in production</div>
           </div>
           <div class="stat-card">
             <div class="stat-number">3</div>
-            <div class="stat-label">Tech domains: Automation · Data · Web</div>
+            <div class="stat-label">Domains: Automation · Data · Web</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">EC</div>
-            <div class="stat-label">Based in Guayaquil, Ecuador</div>
+            <div class="stat-number">100<span class="stat-unit">%</span></div>
+            <div class="stat-label">Workflows replacing manual reporting</div>
           </div>
+          <div class="stat-card">
+            <div class="stat-number">2<span class="stat-unit">yrs</span></div>
+            <div class="stat-label">Hands-on in fraud &amp; compliance</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── How I work (3 pillars) ──────────────────────────── -->
+    <section class="section">
+      <div class="container">
+        <span class="section-label">How I work</span>
+        <h2 class="section-title">Three things I do really well.</h2>
+        <p class="section-desc">A clear specialization, three repeatable outcomes for the teams I work with.</p>
+
+        <div class="pillars-grid">
+          <article class="pillar-card" data-reveal>
+            <div class="pillar-num">01</div>
+            <div class="pillar-icon">⚡</div>
+            <h3>Automate</h3>
+            <p>Power Automate flows that replace email-driven, copy-paste processes — with conditional logic, duplicate detection, and concurrency safety.</p>
+            <ul class="pillar-list">
+              <li>Forms → SharePoint → Excel pipelines</li>
+              <li>HTML email generation with dynamic data</li>
+              <li>Mutex patterns for safe concurrent writes</li>
+            </ul>
+          </article>
+
+          <article class="pillar-card" data-reveal>
+            <div class="pillar-num">02</div>
+            <div class="pillar-icon">📊</div>
+            <h3>Analyze</h3>
+            <p>End-to-end data analysis — from raw Excel sheets to clean dashboards and decisions a stakeholder can actually act on.</p>
+            <ul class="pillar-list">
+              <li>EDA, cleaning &amp; data quality flags</li>
+              <li>Interactive Chart.js / Power BI dashboards</li>
+              <li>Executive reporting &amp; oral defense</li>
+            </ul>
+          </article>
+
+          <article class="pillar-card" data-reveal>
+            <div class="pillar-num">03</div>
+            <div class="pillar-icon">🛠️</div>
+            <h3>Build</h3>
+            <p>Web and software tools — vanilla JS, C#, and SQL — to turn the analysis into something a team can use every day.</p>
+            <ul class="pillar-list">
+              <li>Responsive sites with HTML/CSS/JS</li>
+              <li>Object-oriented C# (.NET) console apps</li>
+              <li>SQL queries &amp; relational data models</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
@@ -74,8 +184,13 @@
     <!-- ── Featured Projects ───────────────────────────────── -->
     <section class="section">
       <div class="container">
-        <span class="section-label">Selected work</span>
-        <h2 class="section-title">Featured Projects</h2>
+        <div class="section-head-row">
+          <div>
+            <span class="section-label">Selected work</span>
+            <h2 class="section-title">Featured Projects</h2>
+          </div>
+          <a href="projects.html" class="section-head-link">All projects →</a>
+        </div>
         <p class="section-desc">A cross-section of my work in automation, data analysis, and web development.</p>
 
         <div class="featured-grid">
@@ -97,7 +212,7 @@
               </div>
             </div>
             <div class="card-footer">
-              <a href="projects.html" class="btn btn-outline">See all projects →</a>
+              <a href="projects.html#pa-compliance-tracker" class="card-link">View project →</a>
             </div>
           </article>
 
@@ -118,7 +233,7 @@
               </div>
             </div>
             <div class="card-footer">
-              <a href="projects.html" class="btn btn-outline">See all projects →</a>
+              <a href="projects.html#ds-alimentos-sa" class="card-link">View project →</a>
             </div>
           </article>
 
@@ -139,7 +254,7 @@
               </div>
             </div>
             <div class="card-footer">
-              <a href="projects.html" class="btn btn-outline">See all projects →</a>
+              <a href="projects.html#cse-mindfulness" class="card-link">View project →</a>
             </div>
           </article>
 
@@ -149,23 +264,60 @@
 
     <hr class="divider">
 
-    <!-- ── Tools I use ─────────────────────────────────────── -->
+    <!-- ── Tools I use (grouped) ───────────────────────────── -->
     <section class="section">
       <div class="container">
         <span class="section-label">Tech stack</span>
         <h2 class="section-title">Tools &amp; Technologies</h2>
-        <p class="section-desc">The platforms and languages I work with daily in my professional and academic work.</p>
+        <p class="section-desc">Grouped by where they fit in my workflow.</p>
 
-        <div class="tools-strip" data-reveal>
-          <span class="tool-badge">⚡ Power Automate</span>
-          <span class="tool-badge">📊 Power BI</span>
-          <span class="tool-badge">📁 SharePoint</span>
-          <span class="tool-badge">📋 Excel</span>
-          <span class="tool-badge">🌐 HTML / CSS</span>
-          <span class="tool-badge">⚙️ JavaScript</span>
-          <span class="tool-badge">🔷 C#</span>
-          <span class="tool-badge">🗄️ SQL</span>
-          <span class="tool-badge">🐍 Python</span>
+        <div class="tools-groups">
+          <div class="tools-group" data-reveal>
+            <h4 class="tools-group-title"><span>⚡</span> Automation</h4>
+            <div class="tools-strip">
+              <span class="tool-badge">Power Automate</span>
+              <span class="tool-badge">SharePoint</span>
+              <span class="tool-badge">Microsoft Forms</span>
+              <span class="tool-badge">OneDrive</span>
+            </div>
+          </div>
+
+          <div class="tools-group" data-reveal>
+            <h4 class="tools-group-title"><span>📊</span> Data</h4>
+            <div class="tools-strip">
+              <span class="tool-badge">Excel</span>
+              <span class="tool-badge">Power BI</span>
+              <span class="tool-badge">SQL</span>
+              <span class="tool-badge">Python</span>
+            </div>
+          </div>
+
+          <div class="tools-group" data-reveal>
+            <h4 class="tools-group-title"><span>🛠️</span> Code</h4>
+            <div class="tools-strip">
+              <span class="tool-badge">HTML / CSS</span>
+              <span class="tool-badge">JavaScript</span>
+              <span class="tool-badge">C# / .NET</span>
+              <span class="tool-badge">Chart.js</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA banner ──────────────────────────────────────── -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-banner" data-reveal>
+          <div>
+            <span class="section-label">Let's talk</span>
+            <h2 class="cta-title">Have a process worth automating?</h2>
+            <p class="cta-desc">Open to analyst, automation, and data roles — full-time or contract, on-site in Guayaquil or remote.</p>
+          </div>
+          <div class="cta-actions">
+            <a href="contact.html" class="btn btn-primary">Start a conversation →</a>
+            <a href="about.html" class="btn btn-outline">More about me</a>
+          </div>
         </div>
       </div>
     </section>
@@ -174,9 +326,30 @@
 
   <!-- ── Footer ──────────────────────────────────────────── -->
   <footer class="site-footer">
-    <div class="footer-inner">
-      <p>© 2024 Gabriel Muñoz · Guayaquil, Ecuador</p>
-      <a href="references.html">References &amp; Sources</a>
+    <div class="container footer-inner footer-v2">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">GM<span>.</span></a>
+        <p>Data &amp; Automation Analyst<br>Guayaquil, Ecuador</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Elsewhere</h4>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="mailto:hello@example.com">Email ↗</a>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <a href="references.html">References &amp; Sources</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2024 Gabriel Muñoz · Built from scratch with HTML, CSS &amp; JS.</p>
     </div>
   </footer>
 
