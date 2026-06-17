@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Gabriel Muñoz — available for data analysis, automation, and web development opportunities.">
+  <title>Contact — Gabriel Muñoz</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────── -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">GM<span>.</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page-wrapper">
+    <section class="section">
+      <div class="container">
+
+        <span class="section-label">Get in touch</span>
+        <h1 style="font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 0.75rem;">Let's work together</h1>
+        <p class="section-desc">
+          I'm open to analyst, automation, and data roles. Use the form below or reach out through the channels on the left.
+        </p>
+
+        <div class="contact-grid">
+
+          <!-- ── Left: info ──────────────────────────────── -->
+          <div data-reveal>
+            <div class="info-card">
+              <div class="info-card-icon">📍</div>
+              <h3>Location</h3>
+              <p>Guayaquil, Ecuador<br>Open to remote opportunities</p>
+            </div>
+            <div class="info-card">
+              <div class="info-card-icon">💼</div>
+              <h3>Current role</h3>
+              <p>Fraud &amp; Compliance Analyst<br>Banco Guayaquil</p>
+            </div>
+            <div class="info-card">
+              <div class="info-card-icon">🎓</div>
+              <h3>Education</h3>
+              <p>BYU-Idaho Online<br>Web Development &amp; Computer Science</p>
+            </div>
+            <div class="info-card">
+              <div class="info-card-icon">⏱️</div>
+              <h3>Response time</h3>
+              <p>I typically reply within 1–2 business days.</p>
+            </div>
+          </div>
+
+          <!-- ── Right: form ─────────────────────────────── -->
+          <div class="form-panel" data-reveal>
+
+            <!-- Draft banner -->
+            <div id="draft-banner" role="alert">
+              <span>📝 You have a saved draft.</span>
+              <button id="discard-draft" type="button">Discard draft</button>
+            </div>
+
+            <!-- Contact form -->
+            <form id="contact-form" novalidate aria-label="Contact form">
+
+              <div class="form-group">
+                <label for="name">Full name <span aria-hidden="true" style="color:var(--accent);">*</span></label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  placeholder="e.g. María García"
+                  aria-required="true"
+                  aria-describedby="name-error">
+                <span class="form-error" id="name-error" role="alert">Please enter your full name (at least 2 characters).</span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email address <span aria-hidden="true" style="color:var(--accent);">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  placeholder="your@email.com"
+                  aria-required="true"
+                  aria-describedby="email-error">
+                <span class="form-error" id="email-error" role="alert">Please enter a valid email address.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject <span aria-hidden="true" style="color:var(--accent);">*</span></label>
+                <select id="subject" name="subject" aria-required="true" aria-describedby="subject-error">
+                  <option value="">Select a topic…</option>
+                  <option value="job">Job opportunity</option>
+                  <option value="freelance">Freelance / consulting</option>
+                  <option value="collaboration">Collaboration</option>
+                  <option value="other">Other</option>
+                </select>
+                <span class="form-error" id="subject-error" role="alert">Please select a subject.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message <span aria-hidden="true" style="color:var(--accent);">*</span></label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell me about the role, project, or question…"
+                  aria-required="true"
+                  aria-describedby="message-error char-count"></textarea>
+                <span id="char-count" aria-live="polite">20 more characters needed</span>
+                <span class="form-error" id="message-error" role="alert">Message must be at least 20 characters.</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+                Send message
+              </button>
+
+            </form>
+
+            <!-- Success message -->
+            <div id="form-success" role="status" aria-live="polite">
+              <div class="success-icon" aria-hidden="true">✅</div>
+              <h3>Message sent, <span class="success-name"></span>!</h3>
+              <p>Thanks for reaching out. I'll get back to you within 1–2 business days.</p>
+              <a href="index.html" class="btn btn-outline" style="margin-top:1.5rem;">Back to home</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2024 Gabriel Muñoz · Guayaquil, Ecuador</p>
+      <a href="references.html">References &amp; Sources</a>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/contact.js"></script>
+</body>
+</html>

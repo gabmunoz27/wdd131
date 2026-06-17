@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Plan — Gabriel Muñoz Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap">
+  <style>
+    :root {
+      --bg:       #0D0D0D;
+      --surface:  #1A1A2E;
+      --accent:   #00C9A7;
+      --text:     #E2E8F0;
+      --muted:    #64748B;
+      --border:   rgba(255,255,255,0.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      padding: 2rem clamp(1rem, 5vw, 4rem);
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    h1 { font-family: 'Space Grotesk', sans-serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 0.4rem; }
+    h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; font-weight: 600; color: var(--accent); margin: 2.5rem 0 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+    h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 600; margin: 1.25rem 0 0.4rem; }
+    p, li { color: var(--muted); font-size: 0.95rem; }
+    li { margin-left: 1.5rem; margin-bottom: 0.3rem; }
+
+    .header-block {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .meta { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--muted); margin-top: 0.3rem; }
+
+    .logo-block {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.75rem 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .logo-initials {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .logo-initials span { color: var(--accent); }
+    .logo-name { font-size: 0.85rem; color: var(--muted); }
+
+    /* Color schema */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    .color-swatch {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .swatch-block { height: 60px; }
+
+    .swatch-info {
+      background: var(--surface);
+      padding: 0.6rem 0.75rem;
+    }
+
+    .swatch-info strong {
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--text);
+    }
+
+    .swatch-info span {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    /* Typography samples */
+    .type-sample {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .type-label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--accent); margin-bottom: 0.5rem; display: block; letter-spacing: 0.08em; }
+
+    /* Wireframes */
+    .wireframe-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      margin-top: 1rem;
+      align-items: start;
+    }
+
+    .wireframe-label { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--accent); margin-bottom: 0.5rem; display: block; }
+
+    .wireframe-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    .wf-bar { background: var(--accent); border-radius: 3px; opacity: 0.6; }
+    .wf-block { background: var(--border); border-radius: 4px; }
+    .wf-text { background: rgba(255,255,255,0.07); border-radius: 3px; }
+
+    .scenario-card {
+      background: var(--surface);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      padding: 0.85rem 1.1rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    @media (max-width: 640px) {
+      .wireframe-grid { grid-template-columns: 1fr; }
+      .color-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-block">
+    <h1>Website Site Plan</h1>
+    <p class="meta">Student: Gabriel Muñoz &nbsp;·&nbsp; Course: WDD 131 &nbsp;·&nbsp; W05 Project</p>
+    <div class="logo-block">
+      <span class="logo-initials">GM<span>.</span></span>
+      <span class="logo-name">Gabriel Muñoz<br>Portfolio</span>
+    </div>
+  </div>
+
+  <!-- ── Site Name ─────────────────────────────────────────── -->
+  <section>
+    <h2>Site Name</h2>
+    <h3>GM. — Gabriel Muñoz Portfolio</h3>
+    <p>The site name uses the initials <strong>GM</strong> followed by a period, which functions as both a typographic logo and a professional identifier. The period signals precision and finality — qualities relevant to fraud analysis and systematic development work. The domain idea is <strong>gabrielmunoz.dev</strong>, combining a personal identifier with the <code>.dev</code> TLD that directly signals the technical nature of the work.</p>
+  </section>
+
+  <!-- ── Site Purpose ──────────────────────────────────────── -->
+  <section>
+    <h2>Site Purpose</h2>
+    <p>This portfolio presents Gabriel Muñoz as a professional candidate to recruiters and hiring managers in tech and data roles. It documents work across three domains: workflow automation (Power Automate), data analysis (Excel, Power BI, Chart.js), and web/software development (HTML/CSS/JS, C#, SQL). The site communicates technical depth, professional context (Banco Guayaquil), and ongoing education (BYU-Idaho), giving visitors everything they need to evaluate fit without requiring a resume download.</p>
+  </section>
+
+  <!-- ── Scenarios ─────────────────────────────────────────── -->
+  <section>
+    <h2>Scenarios</h2>
+    <p>Questions a target visitor (recruiter / tech hiring manager) might ask:</p>
+    <div class="scenario-card">"What kind of automation work has this person actually shipped — is it toy projects or real systems used in production?"</div>
+    <div class="scenario-card">"Does he know SQL and data fundamentals, or just Excel and dashboards?"</div>
+    <div class="scenario-card">"Can I see examples of his code or output files, and how do I contact him quickly?"</div>
+  </section>
+
+  <!-- ── Color Schema ───────────────────────────────────────── -->
+  <section>
+    <h2>Color Schema</h2>
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="swatch-block" style="background:#0D0D0D;"></div>
+        <div class="swatch-info"><strong>#0D0D0D</strong><span>Base background</span></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-block" style="background:#1A1A2E;"></div>
+        <div class="swatch-info"><strong>#1A1A2E</strong><span>Cards &amp; surfaces</span></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-block" style="background:#00C9A7;"></div>
+        <div class="swatch-info"><strong>#00C9A7</strong><span>Accent / interactive</span></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-block" style="background:#E2E8F0;"></div>
+        <div class="swatch-info"><strong>#E2E8F0</strong><span>Primary text</span></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-block" style="background:#64748B;"></div>
+        <div class="swatch-info"><strong>#64748B</strong><span>Secondary text</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Typography ────────────────────────────────────────── -->
+  <section>
+    <h2>Typography</h2>
+
+    <div class="type-sample">
+      <span class="type-label">DISPLAY / HEADINGS — Space Grotesk 700</span>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:1.8rem;font-weight:700;color:#E2E8F0;">Gabriel Muñoz</div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:600;color:#E2E8F0;margin-top:0.4rem;">Fraud &amp; Compliance Analyst</div>
+    </div>
+
+    <div class="type-sample">
+      <span class="type-label">BODY / UI — Inter 400 / 500</span>
+      <p style="color:#64748B;font-family:'Inter',sans-serif;font-size:0.95rem;">I build automation workflows, data dashboards, and web tools that turn repetitive processes into efficient systems. Currently working at Banco Guayaquil and studying at BYU-Idaho.</p>
+    </div>
+
+    <div class="type-sample">
+      <span class="type-label">CODE / CHIPS / LABELS — JetBrains Mono 400</span>
+      <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.25rem;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:#00C9A7;background:rgba(0,201,167,0.1);border:1px solid rgba(0,201,167,0.3);border-radius:5px;padding:3px 10px;">Power Automate</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:#00C9A7;background:rgba(0,201,167,0.1);border:1px solid rgba(0,201,167,0.3);border-radius:5px;padding:3px 10px;">Excel</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:0.78rem;color:#00C9A7;background:rgba(0,201,167,0.1);border:1px solid rgba(0,201,167,0.3);border-radius:5px;padding:3px 10px;">C#</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Wireframes ─────────────────────────────────────────── -->
+  <section>
+    <h2>Wireframes — Home Page</h2>
+    <div class="wireframe-grid">
+
+      <!-- Mobile -->
+      <div>
+        <span class="wireframe-label">MOBILE (375px)</span>
+        <div class="wireframe-box" style="width:160px;">
+          <!-- Nav -->
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <div class="wf-bar" style="width:30px;height:10px;"></div>
+            <div class="wf-bar" style="width:20px;height:8px;"></div>
+          </div>
+          <!-- Hero text -->
+          <div class="wf-block" style="height:14px;width:80%;margin-bottom:6px;"></div>
+          <div class="wf-block" style="height:22px;width:100%;margin-bottom:6px;"></div>
+          <div class="wf-text" style="height:8px;width:90%;margin-bottom:4px;"></div>
+          <div class="wf-text" style="height:8px;width:75%;margin-bottom:10px;"></div>
+          <!-- Buttons -->
+          <div style="display:flex;gap:6px;margin-bottom:12px;">
+            <div class="wf-bar" style="width:60px;height:16px;"></div>
+            <div class="wf-block" style="width:55px;height:16px;border:1px solid rgba(255,255,255,0.15);background:transparent;"></div>
+          </div>
+          <!-- Stats stacked -->
+          <div class="wf-block" style="height:36px;margin-bottom:5px;"></div>
+          <div class="wf-block" style="height:36px;margin-bottom:5px;"></div>
+          <div class="wf-block" style="height:36px;margin-bottom:12px;"></div>
+          <!-- Cards -->
+          <div class="wf-block" style="height:60px;margin-bottom:5px;"></div>
+          <div class="wf-block" style="height:60px;"></div>
+        </div>
+      </div>
+
+      <!-- Desktop -->
+      <div>
+        <span class="wireframe-label">DESKTOP (1200px)</span>
+        <div class="wireframe-box">
+          <!-- Nav -->
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+            <div class="wf-bar" style="width:28px;height:9px;"></div>
+            <div style="display:flex;gap:10px;">
+              <div class="wf-block" style="width:35px;height:7px;"></div>
+              <div class="wf-block" style="width:45px;height:7px;"></div>
+              <div class="wf-block" style="width:30px;height:7px;"></div>
+              <div class="wf-block" style="width:40px;height:7px;"></div>
+            </div>
+          </div>
+          <!-- Hero: 2-col -->
+          <div style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:14px;margin-bottom:16px;">
+            <div>
+              <div class="wf-block" style="height:10px;width:60%;margin-bottom:8px;"></div>
+              <div class="wf-block" style="height:28px;margin-bottom:8px;"></div>
+              <div class="wf-text" style="height:7px;width:90%;margin-bottom:4px;"></div>
+              <div class="wf-text" style="height:7px;width:80%;margin-bottom:10px;"></div>
+              <div style="display:flex;gap:8px;">
+                <div class="wf-bar" style="width:80px;height:18px;"></div>
+                <div class="wf-block" style="width:75px;height:18px;"></div>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div class="wf-block" style="height:40px;"></div>
+              <div class="wf-block" style="height:40px;"></div>
+              <div class="wf-block" style="height:40px;"></div>
+            </div>
+          </div>
+          <!-- Featured cards: 3-col -->
+          <div class="wf-bar" style="width:80px;height:7px;margin-bottom:6px;opacity:0.5;"></div>
+          <div class="wf-block" style="height:8px;width:40%;margin-bottom:10px;"></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
+            <div class="wf-block" style="height:80px;"></div>
+            <div class="wf-block" style="height:80px;"></div>
+            <div class="wf-block" style="height:80px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Pages ──────────────────────────────────────────────── -->
+  <section>
+    <h2>Page Structure (4 Pages)</h2>
+    <ul>
+      <li><strong>index.html</strong> — Home: hero with stats, featured projects, tools strip</li>
+      <li><strong>projects.html</strong> — All Projects: filterable grid with save/bookmark feature</li>
+      <li><strong>about.html</strong> — About: bio, animated skill bars, timeline, values</li>
+      <li><strong>contact.html</strong> — Contact: validated form with draft autosave (localStorage)</li>
+      <li><strong>references.html</strong> — References (linked from footer, unstyled as permitted)</li>
+    </ul>
+  </section>
+
+  <footer style="margin-top:3rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.08);font-size:0.8rem;color:#3D4A5C;">
+    <p>Gabriel Muñoz · WDD 131 · BYU-Idaho · Site Plan Document</p>
+  </footer>
+
+</body>
+</html>

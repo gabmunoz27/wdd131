@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gabriel Muñoz — Full project portfolio covering Power Automate automation, data analysis, web development, and software engineering.">
+  <title>Projects — Gabriel Muñoz</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────── -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">GM<span>.</span></a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page-wrapper">
+
+    <!-- ── Page header ─────────────────────────────────────── -->
+    <section class="section" style="padding-bottom: 1.5rem;">
+      <div class="container">
+        <span class="section-label">My work</span>
+        <div class="projects-header">
+          <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem);">All Projects</h1>
+          <span id="project-count" aria-live="polite"></span>
+        </div>
+        <p class="section-desc">
+          Projects spanning workflow automation, data analysis, web development, and software engineering.
+          Filter by category or save your favorites — selections persist across visits.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Sticky filter bar ───────────────────────────────── -->
+    <div class="filter-bar-wrapper">
+      <div class="container">
+        <div id="filter-bar" role="group" aria-label="Filter projects by category"></div>
+      </div>
+    </div>
+
+    <!-- ── Projects grid ───────────────────────────────────── -->
+    <section class="section" style="padding-top: 2rem;">
+      <div class="container">
+        <p class="saved-notice" id="saved-notice" aria-live="polite">
+          ★ You have saved projects. They are stored in your browser.
+        </p>
+        <div id="projects-grid" aria-label="Projects list"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2024 Gabriel Muñoz · Guayaquil, Ecuador</p>
+      <a href="references.html">References &amp; Sources</a>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/projects.js"></script>
+  <script>
+    // Show saved notice if any projects are saved
+    document.addEventListener('DOMContentLoaded', () => {
+      const saved = JSON.parse(localStorage.getItem('gm-saved-projects') || '[]');
+      if (saved.length > 0) {
+        document.getElementById('saved-notice').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
