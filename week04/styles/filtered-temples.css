@@ -1,0 +1,154 @@
+:root {
+  --primary: #003355;
+  --primary-dark: #00223b;
+  --accent: #b58a3a;
+  --text: #1a1a1a;
+  --muted: #555;
+  --bg: #ffffff;
+  --card-bg: #ffffff;
+  --card-border: #d6d6d6;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+header {
+  background: var(--primary);
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+#menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: 2px solid transparent;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+#menu:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background: var(--primary-dark);
+  padding: 0 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.navigation.show {
+  max-height: 320px;
+  padding: 1rem;
+}
+
+.navigation a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.6rem 0.75rem;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-weight: 700;
+}
+
+.navigation a:hover,
+.navigation a:focus-visible,
+.navigation a.active {
+  background-color: var(--accent);
+  color: #1a1a1a;
+  outline: none;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 2rem;
+}
+
+main h2 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  color: var(--primary);
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 0.5rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+figure {
+  margin: 0;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  background: var(--card-bg);
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: #eee;
+}
+
+figcaption {
+  padding: 0.75rem 1rem 1rem;
+}
+
+figcaption h3 {
+  margin: 0 0 0.5rem;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+figcaption p {
+  margin: 0.15rem 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+figcaption p span {
+  color: var(--text);
+  font-weight: 700;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--primary-dark);
+  color: #ffffff;
+  font-size: 0.9rem;
+}

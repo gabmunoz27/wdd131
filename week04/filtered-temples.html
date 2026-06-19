@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filtered Temple Album | Gabriel Muñoz</title>
+  <meta name="description" content="A filterable album of Latter-day Saint temples around the world, featuring location, dedication date, and area." />
+  <meta name="author" content="Gabriel B. Muñoz" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/filtered-temples.css" />
+  <link rel="stylesheet" href="styles/filtered-temples-large.css" />
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
+    <button id="menu" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
+    <nav id="primary-nav" class="navigation" aria-label="Primary">
+      <a href="#" data-filter="home">Home</a>
+      <a href="#" data-filter="old">Old</a>
+      <a href="#" data-filter="new">New</a>
+      <a href="#" data-filter="large">Large</a>
+      <a href="#" data-filter="small">Small</a>
+    </nav>
+  </header>
+  <main>
+    <h2 id="filter-title">Home</h2>
+    <section class="gallery" id="gallery" aria-live="polite"></section>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> | Gabriel Muñoz | Guayaquil - Ecuador | Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
